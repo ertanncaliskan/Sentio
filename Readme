@@ -1,0 +1,58 @@
+Documentation for Sentio projects
+
+For showing my skills I have implemented 3 different solutions.
+•	REST and SOAP compatible service with client - Under Service Folder
+•	Chat library for showing implementation of inheritance and two design patterns(Observer and Factory). - Sentio.ChatLibrary
+•	General ORM container library for multiple ORM Libraries(NPoco supported) - AbstractedORMLibrary
+
++REST and SOAP compatible service with Client
+There are four different projects for this implementation;
+•	Sentio.BusinessLogic
+Aspect methods and sevice methods are included in this project. 
+
+LoggingAspect.cs has method start, end and exception states logging features. I combined these methods with Postsharp. SOAP based service methods are using these aspects for logging. 
+
+ServiceLogic.cs has mock methods(Fibonacci and XmltoJson) for representing Layered Approach. I attached this project as reference to service project(Sentio.MixedService)  and I called these two methods like library from service project. 
+
+I used log4net for logging and Postsharp for dependecy injection as third party free library.
+
+•	Sentio.Client
+I have developed this project for simulating client. It has service reference for SOAP calls and also it contains CallRestMethod for making GET requests to Web API. (Program.cs)
+
+•	Sentio.MixedService
+I created new Web API project from Visual Studio 2015. I added Filters folder and added two classes (ErrorFilter and RequestFilter) for logging REST features with log4net. I added one controller for sending GET requests as SentioRESTController. That controller contains two attributes [RequestFilter] and [ErrorFilter] for logging. Under SOAP folder there is asmx file for implementing SOAP based requests. With that approach service consumers can call methods directly with REST Urls or oldschool SOAP service reference. 
+
+•	Sentio.MixedService.Tests
+This project contains Sentio.BusinessLogic project’s logic methods’ unit tests under SentioBusinessTests.cs. 
+
+
+
++Chat library for showing implementation of inheritance and two design patterns
+I have implemented class library for Chat Library implementation representation for chatting solution.( Sentio.ChatLibrary)
+It contains these abilities;
+	 - Get user profile.
+	 - Add contact request.
+	 - Update status message (user is online, offline, custom message)
+	 - Creating private and group conversations.
+	 - Send messages to private and group conversations.
+
+In my solution there are 3 classes for user(LoginUser, Account, ConversationAccount)
+•	LoginUser
+It keeps Id, Pass, User Name
+•	Account
+It keeps Status, Contacts and It can create new Conversation with CreateConversation
+•	ConversationAccount
+This class is detailed for keeping Account's conversation informations 
+It can send new message, can see Account's specific conversation's notifications, can show message history of conversation etc
+Conversations can be create from ConversationFactory class(I used Factory pattern for that), It creates suitable conversation from its type and if there is any error it sends exceptions.
+
+When any account send any message to any conversation Notifications will be sent to all attendeed accounts. I used Observer pattern for implementing notification part. (attendee.Notify(Id, "New Notification!! " + message);)
+I don’t focus on for implementing StringBuilders or property accessibilies. I focused on showing pattern implementations and inheritance.
+
+
+
++General ORM container library for multiple ORM Libraries
+I implemented abstracted data access layer. You can use lots of different ORM tools seperatedly.( AbstractedORMLibrary) There are two important classes and one important enum
+•	classes: DataAccessProvider and DataBase 
+•	enum: EDataAccessType
+DataAccessProvider is an abstract class. when you want to support one of new ORM tool you must implement an data access provider class which is inherited from DataAccessProvider abstract class. In DataAccessProvider there is some abstract methods. You must to implement them for your ORM tools needs. When your implementation is finished you must add one more enum for your ORM tool to EDataAccessType(I have already implemented for NPoco as NPocoDataAccessProvider). when your implementation is finished you must add one more case to DataProvider(Factory approach) method which is in DataBase class. your all entities must be inherited from BaseResultEntity for becoming them a general form of object.
