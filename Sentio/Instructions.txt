@@ -1,0 +1,16 @@
+﻿In my solution there are 3 classes for user(LoginUser, Account, ConversationAccount)
+
+LoginUser
+It keeps Id, Pass, User Name
+
+Account
+It keeps Status, Contacts and It can create new Conversation with CreateConversation
+
+ConversationAccount
+This class is detailed for keeping Account's conversation informations 
+It can send new message, can see Account's specific conversation's notifications, can show message history of conversation etc
+
+Conversations can be create from ConversationFactory class(I used Factory pattern for that), It creates suitable conversation from its type and if there is any error it sends exceptions.
+
+When any account send any message to any conversation Notifications will be sent to all attendeed accounts.
+I used Observer pattern for implementing notification part.

@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sentio.ChatLibrary", "Sentio\Sentio.ChatLibrary.csproj", "{950AFB0F-E896-4393-B102-6EFE78D9CA0E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{BCFB457E-47BA-42FE-85B2-BECAC9A08D3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sentio.MixedService", "Sentio.MixedService\Sentio.MixedService.csproj", "{A65CCDEE-8EF1-4A2D-BD0F-1DE4740BBE82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sentio.MixedService.Tests", "Sentio.MixedService.Tests\Sentio.MixedService.Tests.csproj", "{15E29D14-EB9A-4F77-96FA-03E130083539}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sentio.BusinessLogic", "Sentio.BusinessLogic\Sentio.BusinessLogic.csproj", "{CBB1425A-F4F0-40AE-8E84-1162634E4720}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sentio.Client", "Sentio.Client\Sentio.Client.csproj", "{9F5049D0-7F0B-40AA-A76B-B1E29BE4C1EC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A65CCDEE-8EF1-4A2D-BD0F-1DE4740BBE82} = {A65CCDEE-8EF1-4A2D-BD0F-1DE4740BBE82}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractedORMLibrary", "AbstractedORMLibrary\AbstractedORMLibrary.csproj", "{4BB2E681-0F11-44FC-8AD4-224A474A0760}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{950AFB0F-E896-4393-B102-6EFE78D9CA0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{950AFB0F-E896-4393-B102-6EFE78D9CA0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{950AFB0F-E896-4393-B102-6EFE78D9CA0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{950AFB0F-E896-4393-B102-6EFE78D9CA0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A65CCDEE-8EF1-4A2D-BD0F-1DE4740BBE82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A65CCDEE-8EF1-4A2D-BD0F-1DE4740BBE82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A65CCDEE-8EF1-4A2D-BD0F-1DE4740BBE82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A65CCDEE-8EF1-4A2D-BD0F-1DE4740BBE82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15E29D14-EB9A-4F77-96FA-03E130083539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15E29D14-EB9A-4F77-96FA-03E130083539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15E29D14-EB9A-4F77-96FA-03E130083539}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15E29D14-EB9A-4F77-96FA-03E130083539}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBB1425A-F4F0-40AE-8E84-1162634E4720}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBB1425A-F4F0-40AE-8E84-1162634E4720}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBB1425A-F4F0-40AE-8E84-1162634E4720}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBB1425A-F4F0-40AE-8E84-1162634E4720}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F5049D0-7F0B-40AA-A76B-B1E29BE4C1EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F5049D0-7F0B-40AA-A76B-B1E29BE4C1EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F5049D0-7F0B-40AA-A76B-B1E29BE4C1EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F5049D0-7F0B-40AA-A76B-B1E29BE4C1EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BB2E681-0F11-44FC-8AD4-224A474A0760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BB2E681-0F11-44FC-8AD4-224A474A0760}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BB2E681-0F11-44FC-8AD4-224A474A0760}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BB2E681-0F11-44FC-8AD4-224A474A0760}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A65CCDEE-8EF1-4A2D-BD0F-1DE4740BBE82} = {BCFB457E-47BA-42FE-85B2-BECAC9A08D3D}
+		{15E29D14-EB9A-4F77-96FA-03E130083539} = {BCFB457E-47BA-42FE-85B2-BECAC9A08D3D}
+		{CBB1425A-F4F0-40AE-8E84-1162634E4720} = {BCFB457E-47BA-42FE-85B2-BECAC9A08D3D}
+		{9F5049D0-7F0B-40AA-A76B-B1E29BE4C1EC} = {BCFB457E-47BA-42FE-85B2-BECAC9A08D3D}
+	EndGlobalSection
+EndGlobal
