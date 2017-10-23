@@ -8,7 +8,7 @@ For showing my skills I have implemented 3 different solutions.
 +REST and SOAP compatible service with Client
 There are four different projects for this implementation;
 •	Sentio.BusinessLogic
-Aspect methods and sevice methods are included in this project. 
+Aspect methods and sevice methods are included in this project.  
 
 LoggingAspect.cs has method start, end and exception states logging features. I combined these methods with Postsharp. SOAP based service methods are using these aspects for logging. 
 
