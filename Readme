@@ -17,7 +17,7 @@ ServiceLogic.cs has mock methods(Fibonacci and XmltoJson) for representing Layer
 I used log4net for logging and Postsharp for dependecy injection as third party free library.
 
 •	Sentio.Client
-I have developed this project for simulating client. It has service reference for SOAP calls and also it contains CallRestMethod for making GET requests to Web API. (Program.cs)
+I have developed this project for simulating client. It has service reference for SOAP calls and also it contains CallRestMethod for making GET requests to Web API. (Program.cs) For debugging this library at first you must start Sentio.MixedService project. After that you can debug this project.
 
 •	Sentio.MixedService
 I created new Web API project from Visual Studio 2015. I added Filters folder and added two classes (ErrorFilter and RequestFilter) for logging REST features with log4net. I added one controller for sending GET requests as SentioRESTController. That controller contains two attributes [RequestFilter] and [ErrorFilter] for logging. Under SOAP folder there is asmx file for implementing SOAP based requests. With that approach service consumers can call methods directly with REST Urls or oldschool SOAP service reference. 
